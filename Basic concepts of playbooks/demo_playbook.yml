@@ -1,4 +1,4 @@
-#!/root/ansible/myansible/bin/ansible-playbook
+#!/home/ansible/gcp_ansible/bin/ansible-playbook
 - name: Installing Webserver
   hosts: all
   remote_user: ec2-user
