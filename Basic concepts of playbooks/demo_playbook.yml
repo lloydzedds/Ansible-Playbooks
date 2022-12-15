@@ -1,16 +1,16 @@
 #!/root/ansible/myansible/bin/ansible-playbook
-- name: Installing WebServer
+- name: Installing Webserver
   hosts: all
   remote_user: ec2-user
   become: 'yes'
   become_user: root
 
   tasks:
-    - name: Ensure Apache is at the Latest Version
+    - name: Ensure Apache is at latest version
       yum:
         name: httpd
         state: latest
-    - name: Ensure Apache is Running
+    - name: Ensure apache is up and running
       service:
         name: httpd
         state: started

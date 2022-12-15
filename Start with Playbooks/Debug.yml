@@ -1,0 +1,30 @@
+#!/home/ansible/gcp_ansible/bin/ansible-playbook
+- name: Overview of ansible debug module
+  hosts: all
+  remote_user: ec2-user
+  become: 'yes'
+  become_user: root
+
+  tasks:
+    - name: Task for debug module messaging
+      debug: 
+        msg: "Hi, this is custom message for debug module"
+    - name: Print multiple lines using msg module
+      debug:
+        msg:
+         - "This is multiline message"
+         - "I am line number 2"
+         - "I am line number 3"
+    - name: Print variables using msg module
+      debug:
+        msg:
+         - "Host DNS is - {{ inventory_hostname }}"
+         - Host DNS is - {{ inventory_hostname }}
+         - System {{ inventory_hostname }} has private IP as {{ ansible_default_ipv4.gateway}}
+    - name: Debug module "var" Parameter
+      debug:
+        var: inventory_hostname
+    - name: Verbosity in debug module
+      debug:
+        msg: "This is deep logging at level 3 or above"
+        verbosity: 3
