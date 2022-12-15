@@ -5,26 +5,30 @@
   become: 'yes'
   become_user: root
 
+  vars:
+    xyz: Hello this is xyz1
+    packages: ['wget','unzip','curl','vim']
+    cities:
+    - New York
+    - London
+    - Tokyo
+    - Dubai
+    web_server:  {'Linux': 'httpd', 'Unix': 'apache2'}
+
+
   tasks:
-    - name: Task for debug module messaging
+    - name: This is data collection
       debug: 
-        msg: "Hi, this is custom message for debug module"
-    - name: Print multiple lines using msg module
-      debug:
-        msg:
-         - "This is multiline message"
-         - "I am line number 2"
-         - "I am line number 3"
-    - name: Print variables using msg module
-      debug:
-        msg:
-         - "Host DNS is - {{ inventory_hostname }}"
-         - Host DNS is - {{ inventory_hostname }}
-         - System {{ inventory_hostname }} has private IP as {{ ansible_default_ipv4.gateway}}
-    - name: Debug module "var" Parameter
-      debug:
-        var: inventory_hostname
-    - name: Verbosity in debug module
-      debug:
-        msg: "This is deep logging at level 3 or above"
-        verbosity: 3
+        var: xyz
+    
+    - name: Geting sequence data collection F 1
+      debug: 
+        var: packages
+    
+    - name: Geting sequence data collection F 2
+      debug: 
+        var: cities
+
+    - name: Geting mapped data collection F 2
+      debug: 
+        var: web_server
