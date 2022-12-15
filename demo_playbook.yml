@@ -1,0 +1,13 @@
+- name: Installing Webserver
+  hosts: all
+  become: 'yes'
+  
+  tasks:
+   - name: Ensure Apache is at the latest version
+     yum:
+       name: httpd
+       state: latest
+   - name: Ensure Apache is running
+     service
+       name: httpd
+        state: started
