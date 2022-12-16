@@ -10,7 +10,7 @@
   
   tasks:
   - name: Operation for conditional statements
-     debug:
+    debug:
        msg:
         - "Value of x : {{x}}"
         - "Value of y : {{y}}"
