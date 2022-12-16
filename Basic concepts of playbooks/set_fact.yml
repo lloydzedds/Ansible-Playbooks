@@ -6,13 +6,13 @@
   become_user: root
 
   tasks:
-   - name: retrive Shell version
+   - name: Retrive Shell version
      shell: "bash --version"
      register: bash_ver
    
    - set_fact:
        bash_version: {{ bash_ver.stdout_lines[0].split()[3] }}
-       my_value: bash_ver
-       
+       my_value: Bash Vesion
+
    - debug:
       var: bash_version
