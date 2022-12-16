@@ -4,25 +4,25 @@
   gather_facts: false
 
   vars:
-    a : 20
-    b : 10
-    c : 30
+    x : 20
+    y : 10
+    z : 30
   
   tasks:
-  - name: Operation for conditional statements
-    debug:
-      msg:
-       - "Value of x : {{x}}"
-       - "Value of y : {{y}}"
+   - name: Operation for conditional statements
+     debug:
+       msg:
+        - "Value of x : {{x}}"
+        - "Value of y : {{y}}"
 
-  - name: Operation for conditional statements I
-    debug:
-      msg:
-       - "x is smaller than y"
-    when: x < y
+   - name: Operation for conditional statements I
+     debug:
+       msg:
+        - "x is smaller than y"
+     when: x < y
 
-  - name: Operation for conditional statements II
-    debug:
-      msg:
-       - "x is smaller than y"
-    when: x < y
+   - name: Operation for conditional statements II
+     debug:
+       msg:
+        - "x is smaller than y"
+     when: x < y
