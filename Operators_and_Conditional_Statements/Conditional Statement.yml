@@ -24,5 +24,17 @@
    - name: Operation for conditional statements II
      debug:
        msg:
-        - "x is smaller than y"
-     when: x < y
+        - "x is greater than y"
+     when: x > y
+
+   - name: Operation for conditional statements III
+     debug:
+       msg:
+        - "z is smaller than y"
+     when: z < y
+
+   - name: Operation for conditional statements IV
+     debug:
+       msg:
+        - "z is Greater than y"
+     when: z > y
