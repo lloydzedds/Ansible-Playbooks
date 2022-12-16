@@ -1,0 +1,27 @@
+#!/home/ansible/gcp_ansible/bin/ansible-playbook
+- name: Introduction to Register and set-facts.
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+   a : 20
+   b : {{a*10}}
+
+  vars_prompt:
+    - name: x
+      prompt: Please enter value of x
+      private: no
+    
+    - name: y
+      prompt: Please enter value of y
+      private: no
+
+  tasks:
+   - name: Operation via variable
+     debug:
+      msg:
+       - "value of a is : {{a}}"
+       - "value of b is : {{b}}"
+       - "Addition user defined value x,y is : {{x+y}}"
+       - "Addition typecast user defined value x,y : {{x|int+y|int}}"
+       - "Product of a & b is : {{x|int*y|int}}"
