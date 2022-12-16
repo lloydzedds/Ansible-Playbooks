@@ -7,9 +7,12 @@
 
   tasks:
    - name: retrive Shell version
-     shell: "vash --version"
+     shell: "bash --version"
      register: bash_ver
-
-
+   
+   - set_fact:
+       bash_version: {{ bash_ver.stdout_lines[0].split()[3] }}
+       my_value: bash_ver
+       
    - debug:
       var: bash_version
