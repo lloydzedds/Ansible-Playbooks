@@ -1,0 +1,18 @@
+#!/home/ansible/gcp_ansible/bin/ansible-playbook
+- name: Introduction to Register and set-facts.
+  hosts: all
+  remote_user: ec2-user
+  become: 'yes'
+  become_user: root
+
+  tasks:
+   - name: retrive Shell version
+     shell: "vash --version"
+     register: bash_ver
+
+  - set_fact:
+      bash-version: {{ bash_ver.stdout_lines[0].split()[3] }}
+      my_value: Bash Version
+
+  - debug:
+      var: bash_version
