@@ -11,18 +11,18 @@
   tasks:
   - name: Operation for conditional statements
     debug:
-       msg:
-        - "Value of x : {{x}}"
-        - "Value of y : {{y}}"
+      msg:
+       - "Value of x : {{x}}"
+       - "Value of y : {{y}}"
 
-   - name: Operation for conditional statements I
-     debug:
-       msg:
-        - "x is smaller than y"
-     when: x < y
+  - name: Operation for conditional statements I
+    debug:
+      msg:
+       - "x is smaller than y"
+    when: x < y
 
-    - name: Operation for conditional statements II
-      debug:
-        msg:
-         - "x is smaller than y"
-      when: x < y
+  - name: Operation for conditional statements II
+    debug:
+      msg:
+       - "x is smaller than y"
+    when: x < y
