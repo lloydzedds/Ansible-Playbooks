@@ -1,0 +1,29 @@
+#!/home/ansible/gcp_ansible/bin/ansible-playbook
+
+- name: Loops in Ansible Playbook Part I
+  hosts: all
+  remote_user: ec2-user
+  become: 'yes'
+  become_user: root
+
+  tasks:
+   - name: Ensure Apache at latest version
+     yum:
+      name: httpd
+      state: present
+    
+     notify:
+     - Ensure Apache is running
+     - Ensure Apache is present
+     
+  handlers:
+   - name: Ensure Apache is Running
+     service:
+      name: httpd
+      state: started
+
+   - name: Ensure apache status
+     service:
+       name: httpd
+       state: restart
+
