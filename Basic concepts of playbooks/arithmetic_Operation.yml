@@ -1,0 +1,19 @@
+#!/home/ansible/gcp_ansible/bin/ansible-playbook
+- name: Introduction to Register and set-facts.
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+   a : 10
+   b : 20
+
+  tasks:
+   - name: Arithmatic Operation via variable
+     debug:
+      msg:
+       - "value of a is : {{a}}"
+       - "value of b is : {{b}}"
+       - "Addition of a & b is : {{a+b}}"
+       - "Subtraction of a & b is : {{a-b}}"
+       - "Product of a & b is : {{a*b}}"
+       - "Division of b & a is : {{b/a}}"
