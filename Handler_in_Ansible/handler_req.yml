@@ -14,10 +14,10 @@
     
      notify:
      - Ensure Apache is running
-     - Ensure Apache is present
-     
+     - Ensure Apache status
+
   handlers:
-   - name: Ensure Apache is Running
+   - name: Ensure Apache is running
      service:
       name: httpd
       state: started
