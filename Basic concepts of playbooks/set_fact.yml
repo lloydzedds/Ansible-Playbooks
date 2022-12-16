@@ -11,7 +11,7 @@
      register: bash_ver
 
   - set_fact:
-      bash-version: {{ bash_ver.stdout_lines[0].split()[3] }}
+      bash_version: {{ bash_ver.stdout_lines[0].split()[3] }}
       my_value: Bash Version
 
   - debug:
