@@ -24,7 +24,7 @@
     - debug: var=home1_out
       failed_when: home1_out.rc==2
 
-    rescue:
+     rescue:
       - name: Recovery block
         debug:
            msg: "something failed, Correcting Path"
