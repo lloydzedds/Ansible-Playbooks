@@ -26,5 +26,5 @@
             msg: I will execute even in failure scenario
     
   
-    debug: var=root_dir
-    debug: var=tmp_dir
+    - debug: var=root_dir
+    - debug: var=tmp_dir
