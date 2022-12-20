@@ -7,9 +7,11 @@
     - block:
         - name: List home directory content
           command: ls -l ~/
+          register: root_dir
           
         - name: Failing intentionally
           command: ls -l /tmp/
+          register: tmp_dir
       become: 'yes'
       #ignore_errors: yes
 
@@ -22,3 +24,8 @@
         - name: This will execute always
           debug:
             msg: I will execute even in failure scenario
+    
+    - name: output of tasks
+      debug: 
+       - var = root_dir
+       - var = tmp_dir

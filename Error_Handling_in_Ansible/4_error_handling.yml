@@ -6,6 +6,7 @@
   become_user: root
 
   tasks:
+   - block
     - name: List all files/dirs in /etc location
       command: "ls /etcc/"
       register: home_out
