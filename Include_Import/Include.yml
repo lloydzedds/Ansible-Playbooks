@@ -5,6 +5,6 @@
 
   tasks:
    - name: play 1 - Task 1
-    debug: 
+     debug: 
       msg: "Play 1 - Task 1"
    - include: task1.yml
