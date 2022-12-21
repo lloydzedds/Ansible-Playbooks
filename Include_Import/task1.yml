@@ -1,7 +1,7 @@
-- name: Play 1 - Task 2
+- name: Play Through Include tasks 1 - Task 2
   debug:
-    msg: Play 1 - Task 2
+    msg: Play Through Include tasks 1 - Task 2
 
-- name: play 1.2 - Task 3
+- name: play through Include task - Task 3
   debug: 
-    msg: Play 1.2 - Task 3
+    msg: Play Through Include Tasks - Task 3
