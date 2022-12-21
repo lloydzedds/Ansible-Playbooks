@@ -3,7 +3,7 @@
   hosts: localhost
   gather_facts: false
 
-tasks:
+ tasks:
   - name: play 1 - Task 1
     debug: 
       msg: "Play 1 - Task 1"
