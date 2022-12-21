@@ -7,4 +7,5 @@
    - name: play 1 - Task 1
      debug: 
       msg: "Play 1 - Task 1"
+  
    - include: Playbook.yml
