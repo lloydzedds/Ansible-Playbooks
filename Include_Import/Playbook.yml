@@ -7,4 +7,3 @@
    - name: play 2 - Task 1
      debug: 
       msg: "Play 2 - Task 1"
-   - include: task1.yml
