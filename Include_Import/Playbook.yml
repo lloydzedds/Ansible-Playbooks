@@ -1,0 +1,10 @@
+#!/home/ansible/gcp_ansible/bin/ansible-playbook
+- name: This will show the use of Include module in Ansible
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+   - name: play 2 - Task 1
+     debug: 
+      msg: "Play 2 - Task 1"
+   - include: task1.yml
