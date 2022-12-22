@@ -8,4 +8,4 @@
       debug: 
         msg: "Play 1 - Task 1"
 
-- include: Playbook.yml
+- include: /home/ansible/gcp_ansible/playbooks/Include_Import/Playbook.yml
