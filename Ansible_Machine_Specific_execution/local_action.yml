@@ -13,3 +13,4 @@
       copy:
         src: /tmp/{{ ansible-hostname }}_local_file.ini
         dest: /var/tmp/
+        
