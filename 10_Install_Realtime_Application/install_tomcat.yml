@@ -7,7 +7,7 @@
 
   vars:
     java_version: java-1.8.0-openjdk
-    alternative_path: java-1.8.0-openjdk-1.8.0.302.b08-0.amzn2.0.1.x86_64 
+    alternative_path: java-1.8.0-openjdk-1.8.0.342.b07-1.amzn2.0.1.x86_64
     tomcat_version: 9.0.56 
     tomcat_port: 8090
 
@@ -26,7 +26,7 @@
     alternatives:
       name: java
       link: /bin/java
-      path: /usr/lib/jvm/{{alternative_path}}/jre/bin/java 
+      path: /usr/lib/jvm/{{alternative_path}}/jre/bin/java
 
   - name: Download Tomcat Tar file
     get_url:
