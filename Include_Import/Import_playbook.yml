@@ -7,5 +7,4 @@
    - name: play 1 - Task 1
      debug: 
       msg: "Play 1 - Task 1"
-
 - import_playbook: /home/ansible/gcp_ansible/playbooks/Include_Import/Playbook.yml
