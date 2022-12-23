@@ -1,0 +1,15 @@
+#!/home/ansible/gcp_ansible/bin/ansible-playbook
+- name: Overview of ansible debug module
+  hosts: all
+  remote_user: ec2-user
+  become: 'yes'
+  become_user: root
+
+  tasks:
+    - name: This will create a local file /tmp/local_file.ini
+      local_action: command touch /tmp/"{{ ansible_hostname }}"-local_file.ini
+
+    - name: here we copy the local file to remote destination
+      copy:
+        src: /tmp/{{ ansible-hostname }}_local_file.ini
+        dest: /var/tmp/

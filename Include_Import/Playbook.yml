@@ -1,5 +1,5 @@
 #!/home/ansible/gcp_ansible/bin/ansible-playbook
-- name: This will show the use of Include module in Ansible
+- name: New Playbook attached
   hosts: localhost
   gather_facts: false
 
